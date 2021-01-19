@@ -68,13 +68,8 @@ function App() {
       if(item.id===x.id){
         item.modify=false;
         setmodifyName(item.name)
-        // let it=item;
-        // it.name=modifyName;
-        // it.modify=true
-        // todolist.splice(index,1,it)
       }
     })
-  
     setLoading(false)
     setTimestamp(Date.now())
   }
@@ -112,6 +107,7 @@ function App() {
         }
       })
       setLoading(false)
+      setTimestamp(Date.now())
     }
    
   }

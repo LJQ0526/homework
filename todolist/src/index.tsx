@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+//import * as serviceWorker from './serviceWorker';
 import { compose, createStore } from 'redux';
 import rootReducer from './reducers/rootReducer';
 import { Provider } from 'react-redux';
 import { rapperEnhancer } from './rapper'
-require('./rapper/customFetch')
+require('./rapper/overrideFetch')
 
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -24,4 +24,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-serviceWorker.unregister();
+//serviceWorker.unregister();
